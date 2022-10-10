@@ -13,14 +13,12 @@ var (
 	heigth int
 	width  int
 	gray   bool
-	arr   bool
 )
 
 func init() {
 	flag.BoolVar(&gray, "gray", false, "Apply grayscale on output images")
 	flag.IntVar(&heigth, "h", 0, "Height of images")
 	flag.IntVar(&width, "w", 0, "Width of images")
-	flag.BoolVar(&arr, "arr", false, "Print list of images as JSON array. Defaults to false.")
 
 	flag.Usage = func() {
 		fmt.Printf("Usage: %s myfile.pdf parent_dir/output_dir", os.Args[0])
@@ -38,6 +36,9 @@ func main() {
 
 	input := flag.Arg(0)
 	output := flag.Arg(1)
+
+	fmt.Println(gray)
+	os.Exit(0)
 
 	opts := pdfimage.ConvertRequestOptions{
 		Grayscale: gray,

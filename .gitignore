@@ -5,6 +5,7 @@
 *.exe
 *.exe~
 *.dll
+
 *.so
 *.dylib
 
@@ -19,6 +20,8 @@
 
 # Go workspace file
 go.work
-.vscode
+/.vscode
 *.exe
 *.workspace*
+*.jpeg
+*.jpg
